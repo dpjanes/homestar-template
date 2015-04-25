@@ -93,6 +93,8 @@ TemplateBridge.prototype.connect = function (connectd) {
         return;
     }
 
+    self._validate_connect(connectd);
+
     self._setup_polling();
     self.pull();
 };
