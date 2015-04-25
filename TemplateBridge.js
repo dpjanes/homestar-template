@@ -63,7 +63,7 @@ TemplateBridge.prototype.name = function () {
 /* --- lifecycle --- */
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#discover} for documentation.
  */
 TemplateBridge.prototype.discover = function () {
     var self = this;
@@ -85,7 +85,7 @@ TemplateBridge.prototype.discover = function () {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#connect} for documentation.
  */
 TemplateBridge.prototype.connect = function (connectd) {
     var self = this;
@@ -130,7 +130,7 @@ TemplateBridge.prototype._forget = function () {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#disconnect} for documentation.
  */
 TemplateBridge.prototype.disconnect = function () {
     var self = this;
@@ -144,7 +144,7 @@ TemplateBridge.prototype.disconnect = function () {
 /* --- data --- */
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#push} for documentation.
  */
 TemplateBridge.prototype.push = function (pushd) {
     var self = this;
@@ -180,7 +180,7 @@ TemplateBridge.prototype._push = function (pushd) {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#pull} for documentation.
  */
 TemplateBridge.prototype.pull = function () {
     var self = this;
@@ -192,7 +192,7 @@ TemplateBridge.prototype.pull = function () {
 /* --- state --- */
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#meta} for documentation.
  */
 TemplateBridge.prototype.meta = function () {
     var self = this;
@@ -212,14 +212,14 @@ TemplateBridge.prototype.meta = function () {
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#reachable} for documentation.
  */
 TemplateBridge.prototype.reachable = function () {
     return this.native !== null;
 };
 
 /**
- *  See {iotdb.bridge.Bridge#XXX} for documentation.
+ *  See {iotdb.bridge.Bridge#configure} for documentation.
  */
 TemplateBridge.prototype.configure = function (app) {};
 
