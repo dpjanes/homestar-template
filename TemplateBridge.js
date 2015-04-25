@@ -156,7 +156,7 @@ TemplateBridge.prototype.push = function (pushd) {
 
     logger.info({
         method: "push",
-        putd: putd
+        pushd: pushd
     }, "push");
 
     var qitem = {
