@@ -8,7 +8,7 @@
 
 var iotdb = require("iotdb");
 
-exports.Model = iotdb.make_model('LIFXLight')
+exports.Model = iotdb.make_model('TemplateSomething')
     // .facet(":lighting")
     .name("Template")
     // .description("Template")
