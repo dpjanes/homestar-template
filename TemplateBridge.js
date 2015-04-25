@@ -219,15 +219,6 @@ TemplateBridge.prototype.reachable = function () {
  */
 TemplateBridge.prototype.configure = function (app) {};
 
-/* --- injected: THIS CODE WILL BE REMOVED AT RUNTIME, DO NOT MODIFY  --- */
-TemplateBridge.prototype.discovered = function (bridge) {
-    throw new Error("TemplateBridge.discovered not implemented");
-};
-
-TemplateBridge.prototype.pulled = function (pulld) {
-    throw new Error("TemplateBridge.pulled not implemented");
-};
-
 /* -- internals -- */
 var __singleton;
 
