@@ -22,7 +22,7 @@
 
 "use strict";
 
-exports.Bridge = require('./TemplateBridge');
+exports.Bridge = require('./TemplateBridge').Bridge;
 exports.bindings = [
     require('./models/Template').binding,
 ];
