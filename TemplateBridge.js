@@ -146,9 +146,10 @@ TemplateBridge.prototype.disconnect = function () {
 /**
  *  See {iotdb.bridge.Bridge#push} for documentation.
  */
-TemplateBridge.prototype.push = function (pushd) {
+TemplateBridge.prototype.push = function (pushd, done) {
     var self = this;
     if (!self.native) {
+        done(new Error("not connected"));
         return;
     }
 
@@ -165,6 +166,7 @@ TemplateBridge.prototype.push = function (pushd) {
         run: function () {
             self._pushd(pushd);
             self.queue.finished(qitem);
+            done();
         }
     };
     self.queue.add(qitem);
