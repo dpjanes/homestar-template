@@ -166,8 +166,10 @@ TemplateBridge.prototype.push = function (pushd, done) {
         run: function () {
             self._pushd(pushd);
             self.queue.finished(qitem);
+        },
+        code: function() {
             done();
-        }
+        },
     };
     self.queue.add(qitem);
 };

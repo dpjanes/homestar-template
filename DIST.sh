@@ -3,7 +3,7 @@
 #
 #   David Janes
 #   IOTDB
-#   2015-MM-DD
+#   YYYY-MM-DD
 #
 
 exit 0
