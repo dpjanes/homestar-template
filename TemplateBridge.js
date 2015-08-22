@@ -208,7 +208,7 @@ TemplateBridge.prototype.meta = function () {
         "iot:thing-id": _.id.thing_urn.unique("Template", self.native.uuid, self.initd.number),
         "schema:name": self.native.name || "Template",
 
-        // "iot:number": self.initd.number,
+        // "iot:thing-number": self.initd.number,
         // "iot:device-id": _.id.thing_urn.unique("Template", self.native.uuid),
         // "schema:manufacturer": "",
         // "schema:model": "",
