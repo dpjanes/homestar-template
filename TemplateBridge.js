@@ -5,7 +5,7 @@
  *  IOTDB.org
  *  YYYY-MM-DD
  *
- *  Copyright [2013-2015] [David P. Janes]
+ *  Copyright [2013-2016] [David P. Janes]
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -24,11 +24,10 @@
 
 var iotdb = require('iotdb');
 var _ = iotdb._;
-var bunyan = iotdb.bunyan;
 
 var template = require('template');
 
-var logger = bunyan.createLogger({
+var logger = iotdb.logger({
     name: 'homestar-template',
     module: 'TemplateBridge',
 });
@@ -167,7 +166,7 @@ TemplateBridge.prototype.push = function (pushd, done) {
             self._pushd(pushd);
             self.queue.finished(qitem);
         },
-        code: function() {
+        coda: function() {
             done();
         },
     };

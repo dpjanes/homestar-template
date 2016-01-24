@@ -1,9 +1,11 @@
 {
     "author": "David P. Janes <davidjanes@iotdb.org> (https://iotdb.org)", 
     "bugs": {
-        "url": "https://github.com/dpjanes/homestar-TEMPLATE/issues"
+        "url": "https://github.com/dpjanes/homestar-template/issues"
     }, 
-    "dependencies": {}, 
+    "dependencies": {
+        "iotdb": ">=0.6.3"
+    }, 
     "description": "HomeStar / IOTDB Bridge for Template", 
     "devDependencies": {
         "grunt": "~0.4.5", 
@@ -20,17 +22,14 @@
     "homestar": {}, 
     "license": "Apache-2.0", 
     "main": "index.js", 
-    "name": "homestar-TEMPLATE", 
-    "peerDependencies": {
-        "iotdb": ">=0.6.3"
-    }, 
+    "name": "homestar-template", 
     "private": false, 
     "repository": {
         "type": "git", 
-        "url": "https://github.com/dpjanes/homestar-TEMPLATE"
+        "url": "https://github.com/dpjanes/homestar-template"
     }, 
     "scripts": {
         "test": "grunt"
     }, 
-    "version": "0.0.3"
+    "version": "0.0.0"
 }
