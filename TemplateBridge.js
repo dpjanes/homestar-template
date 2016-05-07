@@ -22,12 +22,12 @@
 
 "use strict";
 
-var iotdb = require('iotdb');
-var _ = iotdb._;
+const iotdb = require('iotdb');
+const _ = iotdb._;
 
-var template = require('template');
+const template = require('template');
 
-var logger = iotdb.logger({
+const logger = iotdb.logger({
     name: 'homestar-template',
     module: 'TemplateBridge',
 });
@@ -38,8 +38,8 @@ var logger = iotdb.logger({
  *  @param {object|undefined} native
  *  only used for instances, should be 
  */
-var TemplateBridge = function (initd, native) {
-    var self = this;
+const TemplateBridge = function (initd, native) {
+    const self = this;
 
     self.initd = _.defaults(initd,
         iotdb.keystore().get("bridges/TemplateBridge/initd"), {
@@ -65,7 +65,7 @@ TemplateBridge.prototype.name = function () {
  *  See {iotdb.bridge.Bridge#discover} for documentation.
  */
 TemplateBridge.prototype.discover = function () {
-    var self = this;
+    const self = this;
 
     logger.info({
         method: "discover"
@@ -77,7 +77,7 @@ TemplateBridge.prototype.discover = function () {
      *  The first argument should be self.initd, the second
      *  the thing that you do work with
      */
-    var s = self._template();
+    const s = self._template();
     s.on('something', function (native) {
         self.discovered(new TemplateBridge(self.initd, native));
     });
@@ -87,7 +87,7 @@ TemplateBridge.prototype.discover = function () {
  *  See {iotdb.bridge.Bridge#connect} for documentation.
  */
 TemplateBridge.prototype.connect = function (connectd) {
-    var self = this;
+    const self = this;
     if (!self.native) {
         return;
     }
@@ -99,12 +99,12 @@ TemplateBridge.prototype.connect = function (connectd) {
 };
 
 TemplateBridge.prototype._setup_polling = function () {
-    var self = this;
+    const self = this;
     if (!self.initd.poll) {
         return;
     }
 
-    var timer = setInterval(function () {
+    const timer = setInterval(function () {
         if (!self.native) {
             clearInterval(timer);
             return;
@@ -115,7 +115,7 @@ TemplateBridge.prototype._setup_polling = function () {
 };
 
 TemplateBridge.prototype._forget = function () {
-    var self = this;
+    const self = this;
     if (!self.native) {
         return;
     }
@@ -132,7 +132,7 @@ TemplateBridge.prototype._forget = function () {
  *  See {iotdb.bridge.Bridge#disconnect} for documentation.
  */
 TemplateBridge.prototype.disconnect = function () {
-    var self = this;
+    const self = this;
     if (!self.native || !self.native) {
         return;
     }
@@ -146,7 +146,7 @@ TemplateBridge.prototype.disconnect = function () {
  *  See {iotdb.bridge.Bridge#push} for documentation.
  */
 TemplateBridge.prototype.push = function (pushd, done) {
-    var self = this;
+    const self = this;
     if (!self.native) {
         done(new Error("not connected"));
         return;
@@ -159,7 +159,7 @@ TemplateBridge.prototype.push = function (pushd, done) {
         pushd: pushd
     }, "push");
 
-    var qitem = {
+    const qitem = {
         // if you set "id", new pushes will unqueue old pushes with the same id
         // id: self.number, 
         run: function () {
@@ -186,7 +186,7 @@ TemplateBridge.prototype._push = function (pushd) {
  *  See {iotdb.bridge.Bridge#pull} for documentation.
  */
 TemplateBridge.prototype.pull = function () {
-    var self = this;
+    const self = this;
     if (!self.native) {
         return;
     }
@@ -198,7 +198,7 @@ TemplateBridge.prototype.pull = function () {
  *  See {iotdb.bridge.Bridge#meta} for documentation.
  */
 TemplateBridge.prototype.meta = function () {
-    var self = this;
+    const self = this;
     if (!self.native) {
         return;
     }
@@ -227,13 +227,13 @@ TemplateBridge.prototype.reachable = function () {
 TemplateBridge.prototype.configure = function (app) {};
 
 /* -- internals -- */
-var __singleton;
+const __singleton;
 
 /**
  *  If you need a singleton to access the library
  */
 TemplateBridge.prototype._template = function () {
-    var self = this;
+    const self = this;
 
     if (!__singleton) {
         __singleton = template.init();

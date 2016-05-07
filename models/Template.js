@@ -10,5 +10,5 @@ var iotdb = require("iotdb");
 
 exports.binding = {
     bridge: require('../TemplateBridge').Bridge,
-    model: require('./Template.json'),
+    model: require('./template.json'),
 };
