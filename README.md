@@ -1,5 +1,5 @@
 # homestar-template
-IOTDB / Home☆Star Module for [Template]().
+[IOTDB](https://github.com/dpjanes/node-iotdb) Bridge for for [Template]().
 
 <img src="https://raw.githubusercontent.com/dpjanes/iotdb-homestar/master/docs/HomeStar.png" align="right" />
 
@@ -9,7 +9,7 @@ IOTDB / Home☆Star Module for [Template]().
 
 Then:
 
-    $ homestar install homestar-template
+    $ npm install homestar-template
 
 # Testing
 
