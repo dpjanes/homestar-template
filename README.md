@@ -5,39 +5,22 @@
 
 # Installation
 
-[Install Home☆Star first](https://homestar.io/about/install).
+* [Read this first](https://github.com/dpjanes/node-iotdb/blob/master/docs/install.md)
 
 Then:
 
     $ npm install homestar-template
 
-# Testing
-
-## IOTDB
+# Use
 
 Turn on Template.
 
-	$ node
-	>>> iotdb = require('iotdb')
-	>>> things = iotdb.connect("Template")
-	>>> things.set(":on", true);
+	const iotdb = require('iotdb')
+    iotdb.use("homestar-template")
+
+	const things = iotdb.connect("Template")
+	things.set(":on", true);
 	
-## [IoTQL](https://github.com/dpjanes/iotdb-iotql)
-
-Change to HDMI1 
-
-	$ homestar install iotql
-	$ homestar iotql
-	> SET state:on = true WHERE meta:model-id = "template";
-
-## Home☆Star
-
-Do:
-
-	$ homestar runner browser=1
-	
-You may have to refresh the page, as it may take a little while for your Things to be discovered. If your TV is not on it won't show up.
-
 # Models
 ## Template
 
