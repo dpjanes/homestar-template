@@ -11,6 +11,16 @@ Then:
 
     $ npm install homestar-template
 
+# Installation and Configuration
+
+* [Read this first](https://github.com/dpjanes/node-iotdb/blob/master/docs/install.md)
+* [Read about installing Home☆Star](https://github.com/dpjanes/node-iotdb/blob/master/docs/homestar.md) 
+
+    $ npm install -g homestar    ## may require sudo
+    $ homestar setup
+    $ npm install homestar-template
+    $ homestar configure homestar-template
+
 # Use
 
 Turn on Template.
