@@ -3,6 +3,12 @@
 
 <img src="https://raw.githubusercontent.com/dpjanes/iotdb-homestar/master/docs/HomeStar.png" align="right" />
 
+# About
+
+Bridge for for [Template]().
+
+* [Read about Bridges](https://github.com/dpjanes/node-iotdb/blob/master/docs/bridges.md)
+
 # Installation
 
 * [Read this first](https://github.com/dpjanes/node-iotdb/blob/master/docs/install.md)
@@ -15,6 +21,8 @@ Then:
 
 * [Read this first](https://github.com/dpjanes/node-iotdb/blob/master/docs/install.md)
 * [Read about installing Home☆Star](https://github.com/dpjanes/node-iotdb/blob/master/docs/homestar.md) 
+
+Then:
 
     $ npm install -g homestar    ## may require sudo
     $ homestar setup
