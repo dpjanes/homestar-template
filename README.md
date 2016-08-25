@@ -25,7 +25,6 @@ Then:
 Then:
 
     $ npm install -g homestar    ## may require sudo
-    $ homestar setup
     $ npm install homestar-template
     $ homestar configure homestar-template
 
