@@ -26,3 +26,5 @@ exports.Bridge = require('./TemplateBridge').Bridge;
 exports.bindings = [
     require('./models/Template').binding,
 ];
+
+exports.module_folder = __dirname;
