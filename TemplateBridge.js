@@ -55,10 +55,6 @@ const TemplateBridge = function (initd, native) {
 
 TemplateBridge.prototype = new iotdb.Bridge();
 
-TemplateBridge.prototype.name = function () {
-    return "TemplateBridge";
-};
-
 /* --- lifecycle --- */
 
 /**

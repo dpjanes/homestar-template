@@ -31,11 +31,13 @@ echo "=================="
     update-package --increment-version --package "$PACKAGE" --homestar || exit 1
 
     tar cf - \
+        --exclude "xx*" \
+        --exclude "yy*" \
         --exclude "node_modules" \
         README.md LICENSE \
         homestar.json package.json \
         TemplateBridge.js index.js \
-        models/*.js models/*.json \
+        models/*/*.js models/*/*.json \
         |
     ( cd "${NPM_DST}" && tar xvf - && npm publish ) || exit 1
     git commit -m "new release" package.json || exit 1
