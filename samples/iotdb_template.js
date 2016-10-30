@@ -1,22 +1,23 @@
 /*
  *  How to use this module in IOTDB / HomeStar
  *  This is the best way to do this
- *  Note: to work, this package must have been installed by 'homestar install' 
  */
 
 "use strict";
 
-var iotdb = require('iotdb');
-var iot = iotdb.iot();
+const iotdb = require('iotdb');
+const _ = iotdb._;
 
-var things = iot.connect('TemplateSomething');
-things.on("istate", function(thing) {
+iotdb.use("homestar-template");
+
+const things = iotdb.connect('TemplateSomething');
+things.on("istate", thing => {
     console.log("+", "istate", thing.thing_id(), "\n ", thing.state("istate"));
 });
-things.on("meta", function(thing) {
+things.on("meta", thing => {
     console.log("+", "meta", thing.thing_id(), "\n ", thing.state("meta"));
 });
-things.on("thing", function(thing) {
+things.on("thing", thing => {
     console.log("+", "discovered", thing.thing_id(), "\n ", thing.state("meta"));
 });
 
